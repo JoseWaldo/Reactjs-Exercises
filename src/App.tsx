@@ -1,11 +1,9 @@
-import "./App.css";
-
-function App() {
+const App = () => {
   return (
-    <main>
-      <h1>Hello World</h1>
+    <main className="flex items-center justify-center">
+      <h1 className="text-2xl text-gray-800">Hello World</h1>
     </main>
   );
-}
+};
 
 export default App;
