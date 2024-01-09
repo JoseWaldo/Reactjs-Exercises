@@ -15,7 +15,9 @@ const ErrorCard = ({
   }, []);
 
   return (
-    <div role="alert" className="alert alert-error w-fit fixed top-4 right-4">
+    <div
+      role="alert"
+      className="alert alert-error w-fit fixed top-4 right-4 z-50">
       <button onClick={closeError}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
