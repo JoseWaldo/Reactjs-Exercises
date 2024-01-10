@@ -5,7 +5,7 @@ interface PokemonCardProps {
 
 const PokemonCard = (props: PokemonCardProps) => {
   return (
-    <div className="card card-compact w-96 bg-base-100 shadow-xl">
+    <div className="card card-compact bg-base-100 shadow-xl w-full">
       <figure>
         <img className="h-32" src={props.image} alt={props.name} />
       </figure>
