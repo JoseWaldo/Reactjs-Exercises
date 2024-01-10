@@ -12,6 +12,9 @@ const ErrorCard = ({
     timeout = setTimeout(() => {
       closeError();
     }, 5000);
+    return () => {
+      clearTimeout(timeout);
+    };
   }, []);
 
   return (
