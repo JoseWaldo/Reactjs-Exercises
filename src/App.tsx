@@ -1,14 +1,15 @@
-import usePokemonData from "./hooks/usePokemonData";
-import PokemonList from "./modules/pokemon/pokemon-list";
+import { Route, Routes } from "react-router-dom";
+import Index from "./pages";
+import PokeApp from "./pages/pokeapp";
 
 const App = () => {
-  const pokemones = usePokemonData();
-
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center gap-4 py-4">
-      <h1 className="text-4xl text-primary font-bold">PokeAPI</h1>
-      {<PokemonList pokemones={pokemones || []} /> || <p>No hay pokemones</p>}
-    </main>
+    <>
+      <Routes>
+        <Route path="/" element={<Index />}></Route>
+        <Route path="pokeapp" element={<PokeApp />}></Route>
+      </Routes>
+    </>
   );
 };
 
