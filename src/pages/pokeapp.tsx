@@ -1,14 +1,11 @@
-import usePokemonData from "../hooks/usePokemonData";
-import PokemonList from "../modules/pokemon/pokemon-list";
+import Layout from "../layouts/layout";
+import PokeAppModule from "../modules/pokemon";
 
 const PokeApp = () => {
-  const pokemones = usePokemonData();
-
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center gap-4 py-4">
-      <h1 className="text-4xl text-primary font-bold">PokeAPI</h1>
-      {<PokemonList pokemones={pokemones || []} /> || <p>No hay pokemones</p>}
-    </main>
+    <Layout>
+      <PokeAppModule />
+    </Layout>
   );
 };
 
