@@ -4,7 +4,7 @@ import useErrorStore from "../store/useErrorStore";
 
 const ENDPOINT_POKEAPI = "https://pokeapi.co/api/v2/pokemon";
 
-const usePokemonData = (): Pokemon[] | undefined => {
+const usePokemonData = (): Pokemon[] => {
   const [pokemons, setPokemons] = useState<Pokemon[]>();
   const { setError, setLoading } = useErrorStore((state) => state.actions);
 
@@ -21,7 +21,7 @@ const usePokemonData = (): Pokemon[] | undefined => {
       });
   }, []);
 
-  return pokemons;
+  return pokemons || [];
 };
 
 export default usePokemonData;
