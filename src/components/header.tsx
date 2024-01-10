@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="navbar w-3/4 bg-base-200 rounded-lg">
+    <header className="navbar w-3/4 max-w-5xl bg-base-200 rounded-lg">
       <div className="flex-1">
         <a className="btn btn-ghost text-secondary font-extrabold text-4xl">
-          ReactJS
+          <Link to="/">ReactJS</Link>
         </a>
       </div>
       <div className="flex-none">
